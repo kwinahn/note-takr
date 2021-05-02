@@ -7,7 +7,6 @@ const notes = require('../db/db.json');
 console.log(notes);
 
 router.get('/notes', (req, res) => {
-   
     let results = notes
     console.log(results)
     res.json(results)
@@ -28,4 +27,4 @@ router.delete('/notes/:id', (req, res) => {
         res.sendStatus(400);
         
     }
-})
+});
