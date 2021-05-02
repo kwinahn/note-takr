@@ -10,6 +10,7 @@ const apiRoutes = require('./routes/apiRoutes');
 
 //sets an initial port.
 const PORT = process.env.PORT || 3000;
+const app = express();
 
 //sets up express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
