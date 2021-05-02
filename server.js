@@ -1,6 +1,6 @@
 // dependencies
-const fs = require('fs');
 const express = require('express');
+const fs = require('fs');
 const path = require('path');
 const router = require('express').Router();
 
