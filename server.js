@@ -7,10 +7,10 @@ const router = require('express').Router();
 
 const htmlRoutes = require('./routes/htmlRoutes');
 const apiRoutes = require('./routes/apiRoutes');
+const app = express();
 
 //sets an initial port.
 const PORT = process.env.PORT || 3000;
-const app = express();
 
 //sets up express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -25,7 +25,7 @@ app.use('/api', apiRoutes);
 
 
 app.listen(PORT, () => {
-  console.log(`App is running on PORT: ${PORT}`);
+  console.log(`App is running on PORT: ${PORT}`)
 });
 
 

@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const router = require('express').Router();
-const { createNewNote, noteDelete } = require('../lib/notes.js');
+const { createNewNote, noteDelete } = require('../lib/notes');
 
 const notes = require('../db/db.json');
 console.log(notes);
