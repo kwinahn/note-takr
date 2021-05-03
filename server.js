@@ -4,10 +4,10 @@ const fs = require('fs');
 const path = require('path');
 const router = require('express').Router();
 
+const app = express();
 
 const htmlRoutes = require('./routes/htmlRoutes');
 const apiRoutes = require('./routes/apiRoutes');
-const app = express();
 
 //sets an initial port.
 const PORT = process.env.PORT || 3000;

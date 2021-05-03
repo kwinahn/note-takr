@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const router = require('express').Router();
-const { createNewNote, noteDelete } = require('../lib/notes');
+const { createNewNote, noteDelete } = require('../lib/notes.js');
 
 const notes = require('../db/db.json');
 console.log(notes);
@@ -14,7 +14,7 @@ router.get('/notes', (req, res) => {
 });
 
 router.post('/notes', (req, res) => {
-    let Note = createNewNote(req.body, notes)
+    const Note = createNewNote(req.body, notes)
     console.log(Note)
     res.json(Note) 
 });
@@ -29,4 +29,4 @@ router.delete('/notes/:id', (req, res) => {
     }
 });
 
-module.exports = router;
+module.exports = router
