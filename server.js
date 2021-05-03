@@ -6,8 +6,8 @@ const router = require('express').Router();
 
 const app = express();
 
-const htmlRoutes = require('./routes/htmlRoutes');
 const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
 
 //sets an initial port.
 const PORT = process.env.PORT || 3000;
@@ -19,9 +19,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-//require routes
-app.use('/', htmlRoutes);
+//require routes (must be in this order for the app to run)
 app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
 
 app.listen(PORT, () => {
